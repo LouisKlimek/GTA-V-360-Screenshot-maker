@@ -5,10 +5,10 @@
     ✌️
   </a>
 
-  <h3 align="center">GTA-V-360-Screenshot-maker</h3>
+  <h3 align="center">GTA V-360 Screenshot maker</h3>
 
   <p align="center">
-    GTA V Mod to take 360° Screenshots
+    A simple GTA V Mod to take 360° Screenshots
     <br />
   </p>
 </p>
