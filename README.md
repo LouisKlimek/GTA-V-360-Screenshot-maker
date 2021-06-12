@@ -47,7 +47,7 @@ To set up the Project locally you will need
 
 3. Now go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates)
 
-4. Load p1-p50 into Microsoft ICE
+4. Load p1.png-p50.png into Microsoft ICE
 
 5. Click your way through Microsoft ICE, just leave all default Options. ICE will take a moment to automaticly stitch the Images together.
 
