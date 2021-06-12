@@ -8,7 +8,7 @@
   <h3 align="center">GTA V-360 Screenshot maker</h3>
 
   <p align="center">
-    A simple GTA V Mod to take 360° Screenshots
+    A simple GTA V Mod to take 360° Screenshots as used on GTA-GeoGuesser.com
     <br />
   </p>
 </p>
