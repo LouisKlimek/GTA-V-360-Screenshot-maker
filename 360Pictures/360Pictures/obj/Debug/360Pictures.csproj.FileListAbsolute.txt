@@ -1,2 +1,0 @@
-C:\xampp\htdocs\gta-geoguessr.com\gtaMod\360Pictures\360Pictures\obj\Debug\360Pictures.csprojAssemblyReference.cache
-C:\xampp\htdocs\gta-geoguessr.com\gtaMod\360Pictures\360Pictures\obj\Debug\360Pictures.csproj.CoreCompileInputs.cache
