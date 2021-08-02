@@ -2,10 +2,10 @@
 <br />
 <p align="center">
   <a href="https://github.com/LouisKlimek/GTA-V-360-Screenshot-maker">
-    ✌️
+    <img src="https://user-images.githubusercontent.com/33849459/127925861-0707f33f-e3c0-41ad-b4ec-68aaf74e19cf.png" alt="Working example"></img>
   </a>
 
-  <h3 align="center">GTA V-360 Screenshot maker</h3>
+  <h3 align="center">GTA V 360 Screenshot maker</h3>
 
   <p align="center">
     A simple GTA V Mod to take 360° Screenshots as used on <a href="https://gta-geoguesser.com/">GTA-GeoGuesser.com</a>
