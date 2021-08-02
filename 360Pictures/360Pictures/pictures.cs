@@ -124,240 +124,59 @@ namespace _360Pictures
 
 			Camera camera1 = World.CreateCamera(position, rotation, 50);
 			camera1.Position = position;
-			camera1.Rotation = new Vector3(0, 0, 0);
-			World.RenderingCamera = camera1;
-			Script.Wait(50);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1-1.jpg"), ImageFormat.Jpeg);
 
-			camera1.Rotation = new Vector3(0, 0, 78.9f);
-			World.RenderingCamera = camera1;
-			Script.Wait(50);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1-2.jpg"), ImageFormat.Jpeg);
-
-			camera1.Rotation = new Vector3(0, 0, (78.95f * 2f));
-			World.RenderingCamera = camera1;
-			Script.Wait(50);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1-3.jpg"), ImageFormat.Jpeg);
-
-			camera1.Rotation = new Vector3(0, 0, (78.95f * 3f));
-			World.RenderingCamera = camera1;
-			Script.Wait(50);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1-4.jpg"), ImageFormat.Jpeg);
-
-			camera1.Rotation = new Vector3(0, 0, (78.95f * 4f));
-			World.RenderingCamera = camera1;
-			Script.Wait(50);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1-5.jpg"), ImageFormat.Jpeg);
-
+			for (float i = 0f; i < 5f; i++)
+            {
+				camera1.Rotation = new Vector3(0, 0, 78.9f * i);
+				World.RenderingCamera = camera1;
+				Script.Wait(50);
+				this.TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p1-{0}.jpg", i + 1) ), ImageFormat.Jpeg);
+			}
 
 			
 			#region Make the Screenshots
 			Camera camera = World.CreateCamera(position, rotation, this.cFov);
-			camera.Position = position;
-			camera.Rotation = new Vector3(rotation.X + 80f, rotation.Y, rotation.Z);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p1.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p2.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p3.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p4.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p5.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p6.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p7.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p8.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p9.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p10.jpg"), ImageFormat.Jpeg);
-			camera.Position = position;
-			camera.Rotation = new Vector3(rotation.X + 40f, rotation.Y, rotation.Z);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p11.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p12.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p13.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p14.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p15.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p16.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p17.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p18.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p19.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p20.jpg"), ImageFormat.Jpeg);
-			camera.Position = position;
-			camera.Rotation = rotation;
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p21.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p22.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p23.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p24.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p25.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p26.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p27.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p28.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p29.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p30.jpg"), ImageFormat.Jpeg);
-			camera.Position = position;
-			camera.Rotation = new Vector3(rotation.X - 40f, rotation.Y, rotation.Z);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p31.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p32.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p33.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p34.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p35.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p36.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p37.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p38.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p39.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p40.jpg"), ImageFormat.Jpeg);
-			camera.Position = position;
-			camera.Rotation = new Vector3(rotation.X - 80f, rotation.Y, rotation.Z);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p41.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p42.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p43.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p44.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p45.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p46.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p47.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p48.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p49.jpg"), ImageFormat.Jpeg);
-			camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
-			World.RenderingCamera = camera;
-			Script.Wait(15);
-			this.TakeScreenShot().Save(Path.Combine(screnshotPath, "p50.jpg"), ImageFormat.Jpeg);
+
+			for (int i = 1; i < 51; i++)
+            {
+				if (new[] { 1, 11, 21, 31, 41 }.Contains(i))
+                {
+					camera.Position = position;
+
+					float shiftedX = 0;
+
+					switch (i)
+                    {
+						case 1:
+							shiftedX = rotation.X + 80f;
+							break;
+						case 11:
+							shiftedX = rotation.X + 40f;
+							break;
+						case 21:
+							// Do nothing
+							break;
+						case 31:
+							shiftedX = rotation.X - 40f;
+							break;
+						case 41:
+							shiftedX = rotation.X - 80f;
+							break;
+						default:
+							throw new ArgumentException("Invalid shift case");
+					}
+
+					camera.Rotation = new Vector3(shiftedX, rotation.Y, rotation.Z);
+				}
+				else
+                {
+					camera.Rotation = new Vector3(camera.Rotation.X, camera.Rotation.Y, camera.Rotation.Z + 35f);
+                }
+
+				World.RenderingCamera = camera;
+				Script.Wait(15);
+				this.TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p{0}.jpg", i) ), ImageFormat.Jpeg);
+			}
 			#endregion
 			
 
