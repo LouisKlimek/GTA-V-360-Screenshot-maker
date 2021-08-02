@@ -43,7 +43,7 @@ To set up the Project locally you will need
 
 1. Get the pictures.cs. <a href="https://github.com/LouisKlimek/GTA-V-360-Screenshot-maker/blob/main/360Pictures/360Pictures/pictures.cs">Download Here</a>
 
-2. While in-game press Numpad 1 to take 1 Screenshot manually or Numpad 3 to activate automatic Screenshots that will be taken every 30 Meters
+2. While in-game press Numpad 1 to take 1 Screenshot manually or Numpad 2 to activate automatic Screenshots that will be taken every 30 Meters
 
 3. Now go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates)
 
