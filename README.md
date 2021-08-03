@@ -5,55 +5,42 @@
     <img src="https://user-images.githubusercontent.com/33849459/127925861-0707f33f-e3c0-41ad-b4ec-68aaf74e19cf.png" alt="Working example"></img>
   </a>
 
-  <h3 align="center">GTA V 360 Screenshot maker</h3>
+  <h3 align="center">GTA V 360 Screenshot Maker</h3>
 
   <p align="center">
-    A simple GTA V Mod to take 360° Screenshots as used on <a href="https://gta-geoguesser.com/">GTA-GeoGuesser.com</a>
+    A simple GTA V Script to take 360° Screenshots as used on <a href="https://gta-geoguesser.com/">GTA-GeoGuesser.com</a>
     <br />
   </p>
 </p>
 
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Contributing](#contributing)
-* [License](#license)
-
-
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A GTA V mod that allows you to take 360° screenshots manually or automatically.
+A GTA V script that allows you to take 360° screenshots manually or automatically.
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
-To set up the Project locally you will need
-* Latest ScriptHookV
-* Latest Community Script Hook V .NET
-* <a href="https://www.heise.de/download/product/image-composite-editor-ice-58832/download">Microsoft ICE</a> (Use the second or third Mirror here because the offical Download on Microsofts Website is currently broken)
+To set up the project locally you will need:
+
+* [Latest ScriptHookV](http://dev-c.com/gtav/scripthookv/)
+
+* [Latest Community Script Hook V .NET](https://github.com/crosire/scripthookvdotnet/releases)
+
+* [Microsoft ICE](https://www.heise.de/download/product/image-composite-editor-ice-58832/download) (Use the second or third mirror from this link because the offical download on Microsoft's Website is currently broken)
 
 ### Installation
 
-1. Get the pictures.cs. <a href="https://github.com/LouisKlimek/GTA-V-360-Screenshot-maker/blob/main/360Pictures/360Pictures/pictures.cs">Download Here</a>
+1. Download Pictures.cs from [here](./360Pictures/360Pictures/Pictures.cs).
 
-2. While in-game press Numpad 1 to take 1 Screenshot manually or Numpad 2 to activate automatic Screenshots that will be taken every 30 Meters
+2. While in-game press Numpad 1 to take one screenshot manually or Numpad 2 to activate automatic screenshots that will be taken every 30 metres.
 
-3. Now go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates)
+3. Go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates).
 
-4. Load p1.png-p50.png into Microsoft ICE
+4. Load p1.png - p50.png into Microsoft ICE.
 
-5. Click your way through Microsoft ICE, just leave all default Options. ICE will take a moment to automaticly stitch the Images together.
+5. Click your way through Microsoft ICE and leave all options as default, ICE will take a moment to automaticly stitch the images together.
 
-6. Export your Image from Microsoft ICE in whatever resolution, Format, etc. you like.
+6. Export the image from Microsoft ICE using your preferred resolution, format, etc.
 
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -64,9 +51,6 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-<!-- LICENSE -->
 ## License
 
-Distributed under the Apache License 2.0. See `LICENSE` for more information.
+Distributed under the Apache License 2.0. See [LICENSE](./LICENSE) for more information.
