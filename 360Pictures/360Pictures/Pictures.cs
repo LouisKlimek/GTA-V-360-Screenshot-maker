@@ -1,43 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GTA;
-using GTA.Math;
-using System.Windows.Forms;
-using System.Drawing;
-using GTA.Native;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Windows.Forms;
+using System.Drawing;
+
+using GTA;
+using GTA.Math;
+using GTA.Native;
 
 namespace _360Pictures
 {
-    public class pictures : Script
+    public class Pictures : Script
     {
-		private string basePath = "360Pictures";
+		private readonly string basePath = "360Pictures";
 
-		private int cFov = 50;
-		private bool cPlayerVisible = false;
-		private bool cHideHud = true;
-		private bool cSaveCoords = true;
+		private readonly int cFov = 50;
+		private readonly bool cPlayerVisible = false;
+		private readonly bool cSaveCoords = true;
 		private bool autoScreenshoting = false;
-		private float takeScreenshotsEveryXmeters = 30f;
+		private readonly float takeScreenshotsEveryXmeters = 30f;
 
-		private Ped character;
+		private readonly Ped character;
 		private Vector3 lastScreenshotPosition;
 
-		public pictures()
+		public Pictures()
         {
-			// Exectus at start time
-			this.Tick += onTick;
-			this.KeyUp += onKeyUp;
-			this.KeyDown += onKeyDown;
+			// Executes at start time
+			this.Tick += OnTick;
+			this.KeyUp += OnKeyUp;
+			this.KeyDown += OnKeyDown;
 
 			character = Game.Player.Character;
 		}
 
-        private void onTick(object sender, EventArgs e)
+        private void OnTick(object sender, EventArgs e)
         {
 			// Executes every Frame
 			Vector3 currentPosition = character.Position;
@@ -50,12 +47,12 @@ namespace _360Pictures
 			}
 
 		}
-        private void onKeyUp(object sender, KeyEventArgs e)
+        private void OnKeyUp(object sender, KeyEventArgs e)
         {
             // Executes if the Player releases a Key
 
         }
-        private void onKeyDown(object sender, KeyEventArgs e)
+        private void OnKeyDown(object sender, KeyEventArgs e)
         {
 			// Executes if the Player presses a Key
 			if (e.KeyCode == Keys.NumPad1)
@@ -86,12 +83,12 @@ namespace _360Pictures
 
 		public void Take360Screenshot()
         {
-			string screnshotPath = "";
+			string screnshotPath;
 			Vector3 position = character.Position;
 			Vector3 rotation = character.Rotation;
 			//Vector3 rotation = new Vector3(0, 0, 0);
 
-			#region Create base Folder if it doesn't exist yet
+			#region Create base folder if it doesn't exist yet
 			if (!Directory.Exists(basePath))
 			{
 				Directory.CreateDirectory(basePath);
@@ -109,7 +106,7 @@ namespace _360Pictures
 			}
 			#endregion
 
-			#region Create the screenshot Folder if it doesn't exist yet
+			#region Create the screenshot folder if it doesn't exist yet
 			if (!Directory.Exists(screnshotPath))
 			{
 				Directory.CreateDirectory(screnshotPath);
