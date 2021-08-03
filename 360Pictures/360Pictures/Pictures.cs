@@ -27,9 +27,9 @@ namespace _360Pictures
 		public Pictures()
         {
 			// Executes at start time
-			Tick += OnTick;
-			KeyUp += OnKeyUp;
-			KeyDown += OnKeyDown;
+			this.Tick += OnTick;
+			this.KeyUp += OnKeyUp;
+			this.KeyDown += OnKeyDown;
 
 			character = Game.Player.Character;
 		}
@@ -39,7 +39,7 @@ namespace _360Pictures
 			// Executes every Frame
 			Vector3 currentPosition = character.Position;
 
-			if (autoScreenshoting && Vector3.Distance(currentPosition, lastScreenshotPosition) > takeScreenshotsEveryXmeters)
+			if (this.autoScreenshoting && Vector3.Distance(currentPosition, lastScreenshotPosition) > takeScreenshotsEveryXmeters)
 			{
 				lastScreenshotPosition = currentPosition;
 
@@ -63,12 +63,12 @@ namespace _360Pictures
 			{
 				if (this.autoScreenshoting)
 				{
-					autoScreenshoting = false;
+					this.autoScreenshoting = false;
 					UI.Notify("Auto 360° Screenshots deactivated.");
 				}
 				else
 				{
-					autoScreenshoting = true;
+					this.autoScreenshoting = true;
 					lastScreenshotPosition = character.Position;
 
 					UI.Notify("Auto 360° Screenshots activated. [Every " + takeScreenshotsEveryXmeters.ToString() + " meters.]");
@@ -116,7 +116,7 @@ namespace _360Pictures
 			Game.TimeScale = 0f; // Pause Game Time
 			Game.Player.LastVehicle.IsVisible = this.cPlayerVisible; // Make Vehicle Insible
 			Game.Player.Character.IsVisible = this.cPlayerVisible; // Make Player Insible
-			HideHud(true); // Hide the HUD
+			this.HideHud(true); // Hide the HUD
 
 
 			Camera camera1 = World.CreateCamera(position, rotation, 50);
@@ -127,12 +127,12 @@ namespace _360Pictures
 				camera1.Rotation = new Vector3(0, 0, 78.9f * i);
 				World.RenderingCamera = camera1;
 				Script.Wait(50);
-				TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p1-{0}.jpg", i + 1) ), ImageFormat.Jpeg);
+				this.TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p1-{0}.jpg", i + 1) ), ImageFormat.Jpeg);
 			}
 
 			
 			#region Make the Screenshots
-			Camera camera = World.CreateCamera(position, rotation, cFov);
+			Camera camera = World.CreateCamera(position, rotation, this.cFov);
 
 			for (int i = 1; i < 51; i++)
             {
@@ -172,7 +172,7 @@ namespace _360Pictures
 
 				World.RenderingCamera = camera;
 				Script.Wait(15);
-				TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p{0}.jpg", i) ), ImageFormat.Jpeg);
+				this.TakeScreenShot().Save(Path.Combine(screnshotPath, string.Format("p{0}.jpg", i) ), ImageFormat.Jpeg);
 			}
 			#endregion
 			
@@ -186,7 +186,7 @@ namespace _360Pictures
 			Game.TimeScale = 1f; //Un-Pause Game
 			Game.Player.LastVehicle.IsVisible = !this.cPlayerVisible; // Make Vehicle Visible again
 			Game.Player.Character.IsVisible = !this.cPlayerVisible; // Make Player Visible again
-			HideHud(false); // Un-Hide the HUD
+			this.HideHud(false); // Un-Hide the HUD
 
 			//UI.Notify("360° Screenshot saved.");
 		}
