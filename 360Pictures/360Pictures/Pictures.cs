@@ -84,9 +84,9 @@ namespace _360Pictures
 		public void Take360Screenshot()
         {
 			string screnshotPath;
-			Vector3 position = character.Position;
+			//Vector3 position = character.Position;
 			Vector3 rotation = character.Rotation;
-			//Vector3 rotation = new Vector3(0, 0, 0);
+			Vector3 position = new Vector3(character.Position.X, character.Position.Y, character.Position.Z + 2);
 
 			#region Create base folder if it doesn't exist yet
 			if (!Directory.Exists(basePath))
