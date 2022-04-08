@@ -31,15 +31,17 @@ To set up the project locally you will need:
 
 1. Download Pictures.cs from [here](./360Pictures/360Pictures/Pictures.cs).
 
-2. While in-game press Numpad 1 to take one screenshot manually or Numpad 2 to activate automatic screenshots that will be taken every 30 metres.
+2. Add the Pictures.cs file to the scripts folder in your GTA V root directory.
 
-3. Go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates).
+3. While in-game press Numpad 1 to take one screenshot manually or Numpad 2 to activate automatic screenshots that will be taken every 30 metres.
 
-4. Load p1.png - p50.png into Microsoft ICE.
+4. Go to your GTA V Folder -> 360Pictures -> Choose one of the folders (each screenshot you take is saved with its coordinates).
 
-5. Click your way through Microsoft ICE and leave all options as default, ICE will take a moment to automaticly stitch the images together.
+5. Load p1.png - p50.png into Microsoft ICE.
 
-6. Export the image from Microsoft ICE using your preferred resolution, format, etc.
+6. Click your way through Microsoft ICE and leave all options as default, ICE will take a moment to automaticly stitch the images together.
+
+7. Export the image from Microsoft ICE using your preferred resolution, format, etc.
 
 ## Contributing
 
